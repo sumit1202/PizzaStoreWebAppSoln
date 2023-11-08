@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "PizzaStoreModelLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/PizzaStoreModelLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PizzaStoreModelLibrary.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "PizzaStoreModelLibrary/1.0.0": {
+      "type": "project",
+      "path": "../PizzaStoreModelLibrary/PizzaStoreModelLibrary.csproj",
+      "msbuildProject": "../PizzaStoreModelLibrary/PizzaStoreModelLibrary.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "PizzaStoreModelLibrary >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/sumitkumar/.nuget/packages/": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/sumitkumar/Desktop/dotnet_dev/PizzaStoreWebAppSoln/PizzaStoreModelLibrary/PizzaStoreModelLibrary.csproj": {
+              "projectPath": "/Users/sumitkumar/Desktop/dotnet_dev/PizzaStoreWebAppSoln/PizzaStoreModelLibrary/PizzaStoreModelLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
