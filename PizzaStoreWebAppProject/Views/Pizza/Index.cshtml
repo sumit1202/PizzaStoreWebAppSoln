@@ -10,9 +10,9 @@
  *@
  @* ------------------------------- *@
 
-@* Strogly bind my view with mode *@
+@* Strogly bind my view with model *@
 
-@model IEnumerable<PizzaStoreApp.Models.PizzaWithPic>
+@model IEnumerable<PizzaStoreWebAppProject.Models.PizzaWithPicModel>
 
 @foreach(var pizza in Model)
 {
@@ -23,7 +23,7 @@
         </h2>
         <img height="200" width="200" class="card-img-top" src="@pizza.Pic" alt="Card image cap">
         <div class="card-body">
-            <p class="card-text">The Pizza is @pizza.Type and only @pizza.Quantity left</p>
+            <p class="card-text">The Pizza is @pizza.Type and only @pizza.Quantity left. Hurry up!!</p>
         </div>
         <a asp-controller="Pizza" asp-action="Details" asp-route-id="@pizza.Id" class="btn btn-primary">View Details</a>
     </div>
