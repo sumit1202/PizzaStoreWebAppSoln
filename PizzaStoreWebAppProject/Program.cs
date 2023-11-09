@@ -1,3 +1,9 @@
+using PizzaStoreWebAppProject.Models;
+using PizzaStoreWebAppProject.Interfaces;
+using PizzaStoreWebAppProject.Repositories;
+using PizzaStoreWebAppProject.Services;
+
+
 internal class Program
 {
     private static void Main(string[] args)
@@ -6,6 +12,14 @@ internal class Program
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
+        builder.Services.AddControllers();
+        builder.Services.AddEndpointsApiExplorer();
+
+        #region InjectUserdefinedServices
+        builder.Services.AddScoped<IRepository<int, PizzaWithPicModel>, PizzaRepository>();
+        builder.Services.AddScoped<IPizzaService, PizzaService>();
+        builder.Services.AddScoped<IManagePizzaService, PizzaService>();
+        #endregion
 
         var app = builder.Build();
 

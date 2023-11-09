@@ -40,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGl6emEvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/sumitkumar/Desktop/dotnet_dev/PizzaStoreWebAppSoln/PizzaStoreWebAppProject/Views/SearchPizza/GetPizzas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VhcmNoUGl6emEvR2V0UGl6emFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/sumitkumar/Desktop/dotnet_dev/PizzaStoreWebAppSoln/PizzaStoreWebAppProject/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
