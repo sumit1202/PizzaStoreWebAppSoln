@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using PIzzaStoreModelLibrary;
 using PizzaStoreWebAppProject.Models;
 
 namespace PizzaStoreWebAppProject.Controllers;
@@ -28,6 +29,27 @@ public class PizzaController : Controller
     {
         pizza.Pic = "/images/" + pizza.Pic;
         pizzaList.Add(pizza);
+        return RedirectToAction("Index");
+    }
+
+    [HttpGet]
+    public IActionResult Details(int id)
+    {
+        Pizza pizza = pizzaList.SingleOrDefault(x => x.Id == id)!;
+        return View(pizza);
+    }
+
+    [HttpGet]
+    public IActionResult Delete(int id)
+    {
+        Pizza pizza = pizzaList.SingleOrDefault(x => x.Id == id)!;
+        return View(pizza); ;
+    }
+
+    [HttpPost]
+    public IActionResult Delete(int id, PizzaWithPicModel pizza)
+    {
+        pizzaList.Remove(pizza);
         return RedirectToAction("Index");
     }
 }
